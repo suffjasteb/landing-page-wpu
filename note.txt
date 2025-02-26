@@ -1,0 +1,23 @@
+yang sering di gunain di laravel ini di antara nya:
+-resource,app,routes,database. sisanya mungkin kalo di butuhin ya
+-Modular adalah sesuatu yang dibuat berdasarkan modul atau modulus, atau dibangun dengan satuan standar. Modular juga bisa berarti dibangun dengan fleksibilitas dan variasi penggunaan. 
+-misal kita sudah bikin sebuah class Post di dalamnya ada data all
+nah nanti cara panggil nya itu Post::all
+-Pengertian Migration Laravel
+Migration adalah sebuah fitur yang ada pada laravel, merupakan Control Version System untuk database dengan menggunakan migration untuk mengelola database dengan lebih mudah.
+-Factory di Laravel digunakan untuk membuat data dummy secara otomatis saat melakukan testing atau mengisi database dengan data contoh
+-Eloquent Relationship adalah fitur di Laravel yang digunakan untuk menghubungkan tabel dalam database menggunakan model. Dengan ini, kita bisa dengan mudah mengambil data dari tabel lain yang memiliki keterkaitan.
+
+
+-- tantangan dari pak sandhika di chapter eloquenment relationship 
+-bikin kategori post nya(pokok nya nanti dia pingin ada kategori di samping nama)
+
+-yang harus di lakuin
+-bikin model category
+-bikin migrasi untuk create category
+-isi tabel nya paling cuma nama kategori sama slug
+-bikin factory (supaya nanti ketika dia melakukan migrate fresh nanti otomatis biar punya kategori default)
+-lakukan relasi ke tabel post(jadi 1 post itu cuma punya 1 kategori dan 1 posts itu punya banyak kategori)
+
+
+-php artisan migrate
