@@ -20,18 +20,22 @@ class CategorySeeder extends Seeder
          Category::create([
             'name' => 'landing page',
             'slug' => 'landing-page',
+            'color' => 'red',
         ]);
          Category::create([
             'name' => 'web design',
             'slug' => 'web-design',
+            'color' => 'green',
         ]);
          Category::create([
             'name' => 'web page',
             'slug' => 'web-page',
+            'color' => 'blue',
         ]);
          Category::create([
             'name' => 'blog page',
             'slug' => 'blog-page',
+            'color' => 'yellow',
         ]);
     }
 }
