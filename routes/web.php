@@ -37,8 +37,15 @@ Route::get('/posts', action: function () {
     // jadi author gak lagi Lazy Loading tapi eager Loading
     // $posts = Post::with(['author', 'category'])->latest()->get();
 
-    $posts = Post::latest()->get();
-    return view('posts', ['title' => 'Blog Page', 'posts' => $posts]);
+    // SELECT * FROM 
+    // $posts = Post::latest();
+    
+    // kalau ada request yang name nya search maka lakukan sesuatu
+    // if(request('search')) {
+    //     $posts->where('title', 'like', '%' . request('search') . '%');
+    // }
+//    kalo gaada yaudah tampilin semua datanya
+    return view('posts', ['title' => 'Blog Page', 'posts' => Post::Filter(request(['search', 'category', 'author']))->latest()->get()]);
 });
 
 // rute post yang singular untuk menampilkan setiap data post
