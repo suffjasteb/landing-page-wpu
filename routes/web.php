@@ -45,7 +45,7 @@ Route::get('/posts', action: function () {
     //     $posts->where('title', 'like', '%' . request('search') . '%');
     // }
 //    kalo gaada yaudah tampilin semua datanya
-    return view('posts', ['title' => 'Blog Page', 'posts' => Post::Filter(request(['search', 'category', 'author']))->latest()->get()]);
+    return view('posts', ['title' => 'Blog Page', 'posts' => Post::Filter(request(['search', 'category', 'author']))->latest()->simplePaginate(5)->withQueryString()]);
 });
 
 // rute post yang singular untuk menampilkan setiap data post

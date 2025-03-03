@@ -33,6 +33,8 @@
             </div>
         </form>
     </div>
+
+    
   
       <div class="py-6  mx-auto max-w-screen-xl lg:py-16 lg:px-0 ">
           <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
@@ -75,4 +77,6 @@
     @endforelse
 </div>  
 </div>
+
+{{ $posts->links() }}
   </x-layout>
